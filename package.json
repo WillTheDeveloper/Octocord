@@ -1,6 +1,7 @@
 {
-  "name": "Octocord",
+  "name": "octocord",
   "version": "1.0.0",
+  "type": "commonjs",
   "dependencies": {
     "@discordjs/builders": "github:discordjs/builders",
     "@discordjs/rest": "^0.5.0",
