@@ -1,12 +1,18 @@
 // Require the necessary discord.js classes
 const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed, MessageSelectMenu, CommandInteraction,
-    Permissions
+    Permissions, Modal, TextInputComponent
 } = require('discord.js');
-const { token } = require('./config.json');
+const { token, gitAccessToken } = require('./config.json');
 const { Sequelize } = require('sequelize');
+const { Octokit } = require("@octokit/rest");
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+
+// Connection to github
+const octokit = new Octokit({
+    auth: gitAccessToken
+});
 
 // Docker database connection
 const sequelize = new Sequelize('postgres://postgres:postgrespw@localhost:49154');
@@ -142,6 +148,22 @@ client.on('interactionCreate', async interaction => {
         {
             await interaction.reply('You are not authorised to complete this action');
         }
+    } else if (commandName === 'gituser'){
+        const modal = new Modal()
+            .setCustomId('gituser')
+            .setTitle('Get GitHub User');
+
+
+        const username = new TextInputComponent()
+            .setCustomId('git-username')
+            .setLabel('GitHub username')
+            .setStyle('SHORT');
+
+        const firstRow = new MessageActionRow().addComponents(username);
+
+        modal.addComponents(username);
+
+        await commandName.showModal(modal);
     }
 });
 
