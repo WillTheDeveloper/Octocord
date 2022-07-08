@@ -10,6 +10,11 @@ client.once('ready', () => {
     console.log('Ready!');
 });
 
+client.on('interactionCreate', interaction => {
+    if (!interaction.isButton()) return;
+    console.log(interaction);
+});
+
 client.on('interactionCreate', async interaction => {
     if (!interaction.isCommand()) return;
 
