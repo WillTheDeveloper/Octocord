@@ -78,6 +78,8 @@ client.on('interactionCreate', async interaction => {
             await interaction.reply('You thought? Pfffft, nah.');
             console.log(interaction.user.username + " thinks they are admin.")
         }
+    } else if (commandName === 'bonk') {
+        await interaction.reply('Bap');
     }
 });
 
