@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Added select menu event listener">
+    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Fixed value issue on dropdown">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +55,7 @@
       <workItem from="1657221598414" duration="4169000" />
       <workItem from="1657261620007" duration="80000" />
       <workItem from="1657262016832" duration="50000" />
-      <workItem from="1657266690693" duration="3812000" />
+      <workItem from="1657266690693" duration="4526000" />
     </task>
     <task id="LOCAL-00001" summary="Trying to resolve problem with deploy commands">
       <created>1657221657943</created>
@@ -105,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657270459265</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed value issue on dropdown">
+      <created>1657270575886</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657270575886</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +139,7 @@
     <MESSAGE value="Added event listener for buttons" />
     <MESSAGE value="Added select menus and deploy command for it" />
     <MESSAGE value="Added select menu event listener" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added select menu event listener" />
+    <MESSAGE value="Fixed value issue on dropdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed value issue on dropdown" />
   </component>
 </project>

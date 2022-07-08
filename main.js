@@ -70,7 +70,7 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.on('interactionCreate', interaction => {
-    console.log(`${interaction.user.tag} in #${interaction.channel.name} triggered an interaction.`);
+    console.log(`${interaction.user.tag} @ #${interaction.channel.name} -> ${interaction.guild.name}`);
 });
 
 // Login to Discord with your client's token
