@@ -51,7 +51,7 @@ client.on('interactionCreate', async interaction => {
                         {
                             label: 'Who asked?',
                             description: 'Big funny',
-                            value: 'who_asked,'
+                            value: 'who_asked',
                         },
                         {
                             label: 'Who are you?',
