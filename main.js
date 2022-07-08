@@ -1,5 +1,7 @@
 // Require the necessary discord.js classes
-const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed, MessageSelectMenu} = require('discord.js');
+const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed, MessageSelectMenu, CommandInteraction,
+    Permissions
+} = require('discord.js');
 const { token } = require('./config.json');
 
 // Create a new client instance
@@ -66,6 +68,16 @@ client.on('interactionCreate', async interaction => {
                     ])
             );
         await interaction.reply({content: 'asked?', components: [row]})
+    } else if (commandName === 'is_admin') {
+        if (interaction.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
+            await interaction.reply('You have admin privileges');
+            console.log(interaction.user.username + " checked for admin privileges.")
+        }
+        else
+        {
+            await interaction.reply('You thought? Pfffft, nah.');
+            console.log(interaction.user.username + " thinks they are admin.")
+        }
     }
 });
 
