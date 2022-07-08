@@ -1,5 +1,5 @@
 // Require the necessary discord.js classes
-const { Client, Intents } = require('discord.js');
+const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed} = require('discord.js');
 const { token } = require('./config.json');
 
 // Create a new client instance
@@ -16,7 +16,19 @@ client.on('interactionCreate', async interaction => {
     const { commandName } = interaction;
 
     if (commandName === 'ping') {
-        await interaction.reply('Pong!');
+        const row = new MessageActionRow()
+            .addComponents(
+                new MessageButton()
+                    .setCustomId('primary')
+                    .setLabel('Primary')
+                    .setStyle('PRIMARY')
+            );
+        const embed = new MessageEmbed()
+            .setColor('#0099ff')
+            .setTitle('Google')
+            .setURL('https://www.google.com')
+            .setDescription('This might take you to google..')
+        await interaction.reply({content: 'Pong!', components: [row], ephemeral: true, embeds: [embed]});
     } else if (commandName === 'server') {
         await interaction.reply('Server info.');
     } else if (commandName === 'user') {
