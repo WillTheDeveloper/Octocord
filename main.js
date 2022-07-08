@@ -24,5 +24,9 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
+client.on('interactionCreate', interaction => {
+    console.log(`${interaction.user.tag} in #${interaction.channel.name} triggered an interaction.`);
+});
+
 // Login to Discord with your client's token
 client.login(token);
