@@ -10,7 +10,7 @@ const commands = [
 	new SlashCommandBuilder().setName('who').setDescription('Why you asking who?'),
 	new SlashCommandBuilder().setName('is_admin').setDescription('Check if you have rights'),
 	new SlashCommandBuilder().setName('bonk').setDescription('You wanna fight?'),
-	new SlashCommandBuilder().setName('addTag').setDescription('Add tag to database')
+	new SlashCommandBuilder().setName('addtag').setDescription('Add tag to database')
 ]
 	.map(command => command.toJSON());
 

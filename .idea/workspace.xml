@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Added database connection">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Added logic to add tags to database">
       <change beforePath="$PROJECT_DIR$/deploy-commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy-commands.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
       <workItem from="1657221598414" duration="4169000" />
       <workItem from="1657261620007" duration="80000" />
       <workItem from="1657262016832" duration="50000" />
-      <workItem from="1657266690693" duration="10882000" />
+      <workItem from="1657266690693" duration="10921000" />
     </task>
     <task id="LOCAL-00001" summary="Trying to resolve problem with deploy commands">
       <created>1657221657943</created>
@@ -148,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657286520778</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added logic to add tags to database">
+      <created>1657287562638</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657287562638</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +184,7 @@
     <MESSAGE value="Added big funny admin command" />
     <MESSAGE value="Added bonk command" />
     <MESSAGE value="Added database connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added database connection" />
+    <MESSAGE value="Added logic to add tags to database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logic to add tags to database" />
   </component>
 </project>
