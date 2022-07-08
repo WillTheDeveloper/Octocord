@@ -1,5 +1,5 @@
 // Require the necessary discord.js classes
-const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed} = require('discord.js');
+const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed, MessageSelectMenu} = require('discord.js');
 const { token } = require('./config.json');
 
 // Create a new client instance
@@ -38,6 +38,31 @@ client.on('interactionCreate', async interaction => {
         await interaction.reply('Server info.');
     } else if (commandName === 'user') {
         await interaction.reply('User info.');
+    } else if (commandName === 'who') {
+        const row = new MessageActionRow()
+            .addComponents(
+                new MessageSelectMenu()
+                    .setCustomId('select')
+                    .setPlaceholder('Who...what?')
+                    .addOptions([
+                        {
+                            label: 'Who asked?',
+                            description: 'Big funny',
+                            value: 'who_asked,'
+                        },
+                        {
+                            label: 'Who are you?',
+                            description: 'If your not sure..',
+                            value: 'who_are_you',
+                        },
+                        {
+                            label: 'Who made this bot?',
+                            description: 'At least one person...',
+                            value: 'who_made_this_bot'
+                        }
+                    ])
+            );
+        await interaction.reply({content: 'asked?', components: [row]})
     }
 });
 
