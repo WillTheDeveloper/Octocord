@@ -148,9 +148,9 @@ client.on('interactionCreate', async interaction => {
         {
             await interaction.reply('You are not authorised to complete this action');
         }
-    } else if (commandName === 'gituser'){
+    } else if (interaction.commandName === 'gituser'){
         const modal = new Modal()
-            .setCustomId('gituser')
+            .setCustomId('git-user')
             .setTitle('Get GitHub User');
 
 
@@ -163,7 +163,7 @@ client.on('interactionCreate', async interaction => {
 
         modal.addComponents(username);
 
-        await commandName.showModal(modal);
+        await interaction.showModal(modal);
     }
 });
 
