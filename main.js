@@ -3,9 +3,20 @@ const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed, MessageS
     Permissions
 } = require('discord.js');
 const { token } = require('./config.json');
+const { Sequelize } = require('sequelize');
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+
+// Docker database connection
+const sequelize = new Sequelize('postgres://postgres:postgrespw@localhost:49154');
+
+try {
+    sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+} catch (error) {
+    console.error('Unable to connect to the database:', error);
+}
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
