@@ -13,6 +13,9 @@ client.once('ready', () => {
 client.on('interactionCreate', interaction => {
     if (!interaction.isButton()) return;
     console.log(interaction);
+
+    if (!interaction.isSelectMenu()) return;
+    console.log(interaction);
 });
 
 client.on('interactionCreate', async interaction => {
