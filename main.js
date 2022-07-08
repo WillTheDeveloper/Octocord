@@ -11,6 +11,20 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 // Docker database connection
 const sequelize = new Sequelize('postgres://postgres:postgrespw@localhost:49154');
 
+const Tags = sequelize.define('tags', {
+    name: {
+        type: Sequelize.STRING,
+        unique: true,
+    },
+    description: Sequelize.TEXT,
+    username: Sequelize.STRING,
+    usage_count: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+    },
+})
+
 try {
     sequelize.authenticate();
     console.log('Connection has been established successfully.');
@@ -20,6 +34,14 @@ try {
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
+    try {
+        Tags.sync()
+        console.log('Tags successfully synced on database.')
+    }
+    catch
+    {
+        console.log('Tags table failed to sync on database.')
+    }
     console.log('Ready!');
 });
 
@@ -91,6 +113,34 @@ client.on('interactionCreate', async interaction => {
         }
     } else if (commandName === 'bonk') {
         await interaction.reply('Bap');
+    } else if (commandName === 'newTag') {
+
+        if (interaction.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
+            const tagName = interaction.options.getString('name');
+            const tagDescription = interaction.options.getString('description');
+
+            try {
+                const tag = await Tags.create({
+                    name: tagName,
+                    description: tagDescription,
+                    username: interaction.user.username,
+                });
+
+                return interaction.reply('Tag ' + tag.name + ' added to "Tags" table.')
+            }
+            catch(error)
+            {
+                if (error.name === 'SequelizeUniqueConstraintError') {
+                    return interaction.reply('Tag already exists. Constraint stops duplicates.');
+                }
+
+                return interaction.reply('Something went wrong with adding the tag. Try again later');
+            }
+        }
+        else
+        {
+            await interaction.reply('You are not authorised to complete this action');
+        }
     }
 });
 
