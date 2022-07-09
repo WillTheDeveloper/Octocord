@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Added input to search for github user">
+    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="It no work :(">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy-commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy-commands.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +64,9 @@
       <workItem from="1657262016832" duration="50000" />
       <workItem from="1657266690693" duration="12935000" />
       <workItem from="1657295445413" duration="639000" />
-      <workItem from="1657296882466" duration="1321000" />
+      <workItem from="1657296882466" duration="1624000" />
+      <workItem from="1657315652642" duration="118000" />
+      <workItem from="1657352338615" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="Trying to resolve problem with deploy commands">
       <created>1657221657943</created>
@@ -177,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657297937397</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="It no work :(">
+      <created>1657298224760</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1657298224760</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +222,7 @@
     <MESSAGE value="Fixed regex problem with registered command" />
     <MESSAGE value="wip, fixing sql adding tags problem" />
     <MESSAGE value="Added input to search for github user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added input to search for github user" />
+    <MESSAGE value="It no work :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="It no work :(" />
   </component>
 </project>

@@ -15,10 +15,15 @@ const commands = [
 	new SlashCommandBuilder().setName('bonk').setDescription('You wanna fight?'),
 
 	// DATABASE THINGS
-	new SlashCommandBuilder().setName('addtag').setDescription('Add tag to database'),
+	// new SlashCommandBuilder().setName('addtag').setDescription('Add tag to database'),
 
 	// GITHUB API STUFF
-	new SlashCommandBuilder().setName('gituser').setDescription('Get information of a user from Github')
+	new SlashCommandBuilder().setName('gituser')
+		.setDescription('Get information of a user from Github')
+		.addStringOption(option =>
+			option.setName('username')
+				.setDescription('The username you are searching for.')
+				.setRequired(true))
 ]
 	.map(command => command.toJSON());
 
