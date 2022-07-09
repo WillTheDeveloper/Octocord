@@ -5,13 +5,16 @@ const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed, MessageS
 const { token, gitAccessToken } = require('./config.json');
 // const { Sequelize } = require('sequelize');
 const { Octokit } = require("@octokit/rest");
+const { createTokenAuth } = require("@octokit/auth-token");
+const auth = createTokenAuth(gitAccessToken);
+const authentication = auth();
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 // Connection to github
 const octokit = new Octokit({
-    auth: gitAccessToken
+    auth: gitAccessToken,
 });
 
 // Docker database connection
@@ -150,6 +153,11 @@ client.on('interactionCreate', async interaction => {
         }
     }*/ else if (interaction.commandName === 'gituser'){
         await interaction.reply("Coming soon...");
+    } else if (interaction.commandName === 'listrepo'){
+        const data = octokit.rest.users.getByUsername({
+            username: "WillTheDeveloper",
+        });
+        await interaction.reply(data)
     }
 });
 

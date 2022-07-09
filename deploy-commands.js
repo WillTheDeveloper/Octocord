@@ -23,7 +23,9 @@ const commands = [
 		.addStringOption(option =>
 			option.setName('username')
 				.setDescription('The username you are searching for.')
-				.setRequired(true))
+				.setRequired(true)),
+	new SlashCommandBuilder().setName('listrepo')
+		.setDescription('List some public repos.')
 ]
 	.map(command => command.toJSON());
 
