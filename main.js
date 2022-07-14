@@ -6,6 +6,7 @@ const { token, gitAccessToken } = require('./config.json');
 // const { Sequelize } = require('sequelize');
 const { Octokit } = require("@octokit/rest");
 const { createTokenAuth } = require("@octokit/auth-token");
+const {parseResponse} = require("@discordjs/rest");
 const auth = createTokenAuth(gitAccessToken);
 const authentication = auth();
 
@@ -151,13 +152,28 @@ client.on('interactionCreate', async interaction => {
         {
             await interaction.reply('You are not authorised to complete this action');
         }
-    }*/ else if (interaction.commandName === 'gituser'){
-        await interaction.reply("Coming soon...");
+    }*/ else if (commandName === 'gituser'){
+        const user = "WillTheDeveloper";
+        const data = await octokit.request('GET /users/{username}', {
+            username: user,
+        })
+        console.log(data.data)
+
+        const userEmbed = new MessageEmbed()
+            .setTitle(data.data.login)
+            .setDescription('User information from the GitHub api.')
+            .setURL(data.data.html_url)
+            .addFields(
+                {name: "Followers", value: data.data.followers.toString(), inline: true},
+                      {name: "Following", value: data.data.following.toString(), inline: true},
+                      {name: "Public Repos", value: data.data.public_repos.toString()},
+                      {name: "Private Repos", value: data.data.total_private_repos.toString(), inline: true},
+            );
+
+
+        await interaction.reply({content: 'User information', embeds: [userEmbed]})
     } else if (interaction.commandName === 'listrepo'){
-        const data = octokit.rest.users.getByUsername({
-            username: "WillTheDeveloper",
-        });
-        await interaction.reply(data)
+
     }
 });
 
