@@ -26,6 +26,10 @@ const commands = [
 				.setRequired(true)),
 	new SlashCommandBuilder().setName('listrepo')
 		.setDescription('List some public repos.')
+		.addStringOption(option =>
+			option.setName('username')
+				.setDescription('The username you are searching for.')
+				.setRequired(true)),
 ]
 	.map(command => command.toJSON());
 

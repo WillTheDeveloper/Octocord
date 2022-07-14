@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Added embed and fixed link for users">
+    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Added thumbnail and removed private hidden per user data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy-commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy-commands.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +69,7 @@
       <workItem from="1657352338615" duration="2832000" />
       <workItem from="1657374433844" duration="8134000" />
       <workItem from="1657392517397" duration="5000" />
-      <workItem from="1657827307434" duration="807000" />
+      <workItem from="1657827307434" duration="4003000" />
     </task>
     <task id="LOCAL-00001" summary="Trying to resolve problem with deploy commands">
       <created>1657221657943</created>
@@ -210,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657827828374</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added thumbnail and removed private hidden per user data">
+      <created>1657828230565</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1657828230565</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +257,7 @@
     <MESSAGE value="Replaced model with options and commented sequelize" />
     <MESSAGE value="Trying to get discord to interact with github api" />
     <MESSAGE value="Added embed and fixed link for users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added embed and fixed link for users" />
+    <MESSAGE value="Added thumbnail and removed private hidden per user data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added thumbnail and removed private hidden per user data" />
   </component>
 </project>

@@ -153,7 +153,8 @@ client.on('interactionCreate', async interaction => {
             await interaction.reply('You are not authorised to complete this action');
         }
     }*/ else if (commandName === 'gituser'){
-        const user = "WillTheDeveloper";
+        const search = interaction.options.getString('username');
+        const user = search;
         const data = await octokit.request('GET /users/{username}', {
             username: user,
         })
@@ -173,7 +174,14 @@ client.on('interactionCreate', async interaction => {
 
         await interaction.reply({content: 'User information', embeds: [userEmbed]})
     } else if (interaction.commandName === 'listrepo'){
-
+        const search = interaction.options.getString('username');
+        const user = search;
+        const index = 1;
+        const data = await octokit.request('GET /users/{username}/repos', {
+            username: user,
+        })
+        console.log(data.data[index].name)
+        await interaction.reply({content: data.data[index].name.toString()})
     }
 });
 
