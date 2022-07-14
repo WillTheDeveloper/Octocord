@@ -202,6 +202,29 @@ client.on('interactionCreate', async interaction => {
 
         console.log(data.data);
         await interaction.reply({content: data.data.name.toString(), embeds: [orgEmbed]})
+    } else if (interaction.commandName === 'listfollowers'){
+        const search = interaction.options.getString('username');
+        const usersearch = search;
+        const data = await octokit.request('GET /users/{username}/followers', {
+            username: usersearch,
+        })
+
+        const followersEmbed = new MessageEmbed()
+            .setTitle(data.data.name + "'s followers")
+            .addFields(
+                {name: "1", value: data.data[0].login.toString()},
+                {name: "2", value: data.data[1].login.toString()},
+                {name: "3", value: data.data[2].login.toString()},
+                // {name: "4", value: data.data[3].login.toString()},
+                // {name: "5", value: data.data[4].login.toString()},
+                // {name: "6", value: data.data[5].login.toString()},
+                // {name: "7", value: data.data[6].login.toString()},
+                // {name: "8", value: data.data[7].login.toString()},
+                // {name: "9", value: data.data[8].login.toString()},
+
+            )
+        console.log(data.data)
+        await interaction.reply({content: "Followers", embeds: [followersEmbed]})
     }
 });
 

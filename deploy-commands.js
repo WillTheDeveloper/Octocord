@@ -36,6 +36,12 @@ const commands = [
 			option.setName('organization')
 				.setDescription('The organization you are searching for.')
 				.setRequired(true)),
+	new SlashCommandBuilder().setName('listfollowers')
+		.setDescription('List some followers.')
+		.addStringOption(option =>
+			option.setName('username')
+				.setDescription('The username you are searching for.')
+				.setRequired(true)),
 ]
 	.map(command => command.toJSON());
 
