@@ -182,6 +182,26 @@ client.on('interactionCreate', async interaction => {
         })
         console.log(data.data[index].name)
         await interaction.reply({content: data.data[index].name.toString()})
+    } else if (interaction.commandName === 'getorg'){
+        const search = interaction.options.getString('organization');
+        const org = search;
+        const data = await octokit.request('GET /orgs/{org}', {
+            org: org,
+        })
+
+        const orgEmbed = new MessageEmbed()
+            .setTitle(data.data.name)
+            .setDescription(data.data.description)
+            .setURL(data.data.html_url)
+            .setThumbnail(data.data.avatar_url)
+            .addFields(
+                {name: "Public Repos", value: data.data.public_repos.toString(), inline: true},
+                {name: "Followers", value: data.data.followers.toString(), inline: true},
+                {name: "Following", value: data.data.following.toString(), inline: true},
+            );
+
+        console.log(data.data);
+        await interaction.reply({content: data.data.name.toString(), embeds: [orgEmbed]})
     }
 });
 

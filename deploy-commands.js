@@ -30,6 +30,12 @@ const commands = [
 			option.setName('username')
 				.setDescription('The username you are searching for.')
 				.setRequired(true)),
+	new SlashCommandBuilder().setName('getorg')
+		.setDescription('Get information of an organization from Github')
+		.addStringOption(option =>
+			option.setName('organization')
+				.setDescription('The organization you are searching for.')
+				.setRequired(true)),
 ]
 	.map(command => command.toJSON());
 
