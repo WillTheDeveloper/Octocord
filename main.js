@@ -161,13 +161,13 @@ client.on('interactionCreate', async interaction => {
 
         const userEmbed = new MessageEmbed()
             .setTitle(data.data.login)
-            .setDescription('User information from the GitHub api.')
+            .setDescription(data.data.bio)
+            .setThumbnail(data.data.avatar_url)
             .setURL(data.data.html_url)
             .addFields(
                 {name: "Followers", value: data.data.followers.toString(), inline: true},
                       {name: "Following", value: data.data.following.toString(), inline: true},
                       {name: "Public Repos", value: data.data.public_repos.toString()},
-                      {name: "Private Repos", value: data.data.total_private_repos.toString(), inline: true},
             );
 
 
