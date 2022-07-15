@@ -232,7 +232,22 @@ client.on('interactionCreate', async interaction => {
             owner: username,
             repo: repository
         })
-        console.log(data.data)
+        // console.log(data.data)
+        console.log(username.toString() + " | " + repository.toString())
+    } else if (interaction.commandName === 'listorgprojects'){
+        const search = interaction.options.getString('organization');
+        const org = search;
+        const data = await octokit.request('GET /orgs/{org}/projects', {
+            org: org,
+        })
+        console.log(data.data[0].name)
+
+        const orgEmbed = new MessageEmbed()
+            .setTitle(data.data[0].name)
+            .setDescription(data.data[0].body)
+            .setURL(data.data[0].html_url)
+
+        await interaction.reply({content: data.data[0].name.toString(), embeds: [orgEmbed]})
     }
 });
 

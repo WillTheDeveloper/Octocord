@@ -52,6 +52,12 @@ const commands = [
 			option.setName('repository')
 				.setDescription('The repository you want to get the release from.')
 				.setRequired(true)),
+	new SlashCommandBuilder().setName('listorgprojects')
+		.setDescription('List projects of an organization.')
+		.addStringOption(option =>
+			option.setName('organization')
+				.setDescription('The organization you are searching for.')
+				.setRequired(true)),
 ]
 	.map(command => command.toJSON());
 
