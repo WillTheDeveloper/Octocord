@@ -248,6 +248,20 @@ client.on('interactionCreate', async interaction => {
             .setURL(data.data[0].html_url)
 
         await interaction.reply({content: data.data[0].name.toString(), embeds: [orgEmbed]})
+    } else if (interaction.commandName === 'getproject') {
+        const search = interaction.options.getString('project_id');
+        const project = search;
+        const data = await octokit.request('GET /projects/{project_id}', {
+            project_id: project,
+        })
+        console.log(data.data)
+
+        const projectEmbed = new MessageEmbed()
+            .setTitle(data.data.name)
+            .setDescription(data.data.body)
+            .setURL(data.data.html_url)
+
+        await interaction.reply({content: data.data.name.toString(), embeds: [projectEmbed]})
     }
 });
 
