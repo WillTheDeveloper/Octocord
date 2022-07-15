@@ -42,6 +42,16 @@ const commands = [
 			option.setName('username')
 				.setDescription('The username you are searching for.')
 				.setRequired(true)),
+	new SlashCommandBuilder().setName('latestrelease')
+		.setDescription('Get the latest release of a repo.')
+		.addStringOption(option =>
+			option.setName('username')
+				.setDescription('The user who owns the repository.')
+				.setRequired(true))
+		.addStringOption(option =>
+			option.setName('repository')
+				.setDescription('The repository you want to get the release from.')
+				.setRequired(true)),
 ]
 	.map(command => command.toJSON());
 

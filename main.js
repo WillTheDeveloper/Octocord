@@ -225,6 +225,14 @@ client.on('interactionCreate', async interaction => {
             )
         console.log(data.data)
         await interaction.reply({content: "Followers", embeds: [followersEmbed]})
+    } else if (interaction.commandName === 'latestrelease'){
+        const username = interaction.options.getString('username');
+        const repository = interaction.options.getString('repository');
+        const data = await octokit.request('GET /repos/{owner}/{repo}/releases/latest', {
+            owner: username,
+            repo: repository
+        })
+        console.log(data.data)
     }
 });
 
