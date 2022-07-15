@@ -210,7 +210,7 @@ client.on('interactionCreate', async interaction => {
         })
 
         const followersEmbed = new MessageEmbed()
-            .setTitle(data.data.name + "'s followers")
+            .setTitle(usersearch.toLowerCase() + "'s followers")
             .addFields(
                 {name: "1", value: data.data[0].login.toString()},
                 {name: "2", value: data.data[1].login.toString()},
