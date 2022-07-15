@@ -17,6 +17,11 @@ Octocord is a discord bot and GitHub application that are connected to each othe
 
 - Retrieve information directly from GitHub API.
 - Prettified output using embeds.
+- Easily get information about: *(Links take you to the wiki documentation and information)*
+  - [Users](https://github.com/WillTheDeveloper/Octocord/wiki/Users)
+  - [Repositories](https://github.com/WillTheDeveloper/Octocord/wiki/Repository)
+  - [Organizations](https://github.com/WillTheDeveloper/Octocord/wiki/Organizations)
+  - [Issues](https://github.com/WillTheDeveloper/Octocord/wiki/Issues)
 
 **An in depth breakdown on which areas of the Github API are currently covered can be found on the wiki of this repository**
 
