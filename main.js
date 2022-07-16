@@ -3,7 +3,7 @@ const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed, MessageS
     Permissions, Modal, TextInputComponent
 } = require('discord.js');
 const { token, gitAccessToken } = require('./config.json');
-// const { Sequelize } = require('sequelize');
+const { Sequelize } = require('sequelize');
 const { Octokit } = require("@octokit/rest");
 const { createTokenAuth } = require("@octokit/auth-token");
 const {parseResponse} = require("@discordjs/rest");
@@ -19,9 +19,9 @@ const octokit = new Octokit({
 });
 
 // Docker database connection
-// const sequelize = new Sequelize('postgres://postgres:postgrespw@localhost:49154');
+const sequelize = new Sequelize('postgres://postgres:postgrespw@localhost:49153/octocord');
 
-/*const Tags = sequelize.define('tags', {
+const Tags = sequelize.define('tags', {
     name: {
         type: Sequelize.STRING,
         unique: true,
@@ -40,18 +40,18 @@ try {
     console.log('Connection has been established successfully.');
 } catch (error) {
     console.error('Unable to connect to the database:', error);
-}*/
+}
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
-    /*try {
+    try {
         Tags.sync()
         console.log('Tags successfully synced on database.')
     }
     catch
     {
         console.log('Tags table failed to sync on database.')
-    }*/
+    }
     console.log('Ready!');
 });
 
@@ -123,7 +123,7 @@ client.on('interactionCreate', async interaction => {
         }
     } else if (commandName === 'bonk') {
         await interaction.reply('Bap');
-    } /*else if (commandName === 'newTag') {
+    } else if (commandName === 'newTag') {
 
         if (interaction.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
             const tagName = commandName.options.getString('name');
@@ -152,7 +152,7 @@ client.on('interactionCreate', async interaction => {
         {
             await interaction.reply('You are not authorised to complete this action');
         }
-    }*/ else if (commandName === 'gituser'){
+    } else if (commandName === 'gituser'){
         const search = interaction.options.getString('username');
         const user = search;
         const data = await octokit.request('GET /users/{username}', {

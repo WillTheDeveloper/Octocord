@@ -15,7 +15,15 @@ const commands = [
 	new SlashCommandBuilder().setName('bonk').setDescription('You wanna fight?'),
 
 	// DATABASE THINGS
-	// new SlashCommandBuilder().setName('addtag').setDescription('Add tag to database'),
+	new SlashCommandBuilder().setName('addtag').setDescription('Add tag to database')
+		.addStringOption(option =>
+			option.setName('name')
+				.setDescription('Name of the tag')
+				.setRequired(true))
+		.addStringOption(option =>
+			option.setName('description')
+				.setDescription('Description of the tag')
+				.setRequired(true)),
 
 	// GITHUB API STUFF
 	new SlashCommandBuilder().setName('gituser')
