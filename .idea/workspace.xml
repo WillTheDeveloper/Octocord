@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Updated version in package.json">
+    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Uncommented all the database stuff">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy-commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy-commands.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +75,9 @@
       <workItem from="1657918233784" duration="5000" />
       <workItem from="1657966652520" duration="909000" />
       <workItem from="1657997476969" duration="152000" />
-      <workItem from="1657999723636" duration="550000" />
+      <workItem from="1657999723636" duration="1700000" />
+      <workItem from="1658388985398" duration="533000" />
+      <workItem from="1658389536935" duration="283000" />
     </task>
     <task id="LOCAL-00001" summary="Trying to resolve problem with deploy commands">
       <created>1657221657943</created>
@@ -281,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657904343158</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Uncommented all the database stuff">
+      <created>1658000303230</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1658000303230</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +308,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added event listener for buttons" />
     <MESSAGE value="Added select menus and deploy command for it" />
     <MESSAGE value="Added select menu event listener" />
     <MESSAGE value="Fixed value issue on dropdown" />
@@ -325,6 +332,7 @@
     <MESSAGE value="Added command to get org projects list" />
     <MESSAGE value="Added get project by id" />
     <MESSAGE value="Updated version in package.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated version in package.json" />
+    <MESSAGE value="Uncommented all the database stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uncommented all the database stuff" />
   </component>
 </project>

@@ -2,7 +2,7 @@
 const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed, MessageSelectMenu, CommandInteraction,
     Permissions, Modal, TextInputComponent
 } = require('discord.js');
-const { token, gitAccessToken } = require('./config.json');
+const { token, gitAccessToken, database_type, database_host, database_port, database_name, database_user, database_password } = require('./config.json');
 const { Sequelize } = require('sequelize');
 const { Octokit } = require("@octokit/rest");
 const { createTokenAuth } = require("@octokit/auth-token");
@@ -19,7 +19,8 @@ const octokit = new Octokit({
 });
 
 // Docker database connection
-const sequelize = new Sequelize('postgres://postgres:postgrespw@localhost:49153/octocord');
+// const sequelize = new Sequelize('postgres://postgres:postgrespw@localhost:49160/octocord');
+const sequelize = new Sequelize(database_type + '://' + database_user + ':' + database_password + '@' + database_host + ':' + database_port + '/' + database_name);
 
 const Tags = sequelize.define('tags', {
     name: {
