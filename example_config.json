@@ -1,0 +1,14 @@
+{
+  "guildId": "",
+  "clientId": "",
+  "token": "",
+  "gitAccessToken": "",
+  "gitAppKey": "",
+
+  "database_type": "",
+  "database_host": "",
+  "database_port": "",
+  "database_name": "",
+  "database_user": "",
+  "database_password": ""
+}

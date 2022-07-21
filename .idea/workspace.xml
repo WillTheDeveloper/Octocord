@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Uncommented all the database stuff">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+    <list default="true" id="bc34fa8c-e417-46a7-81e6-75acf5ef3982" name="Changes" comment="Moved DB stuff into config.json">
+      <change afterPath="$PROJECT_DIR$/example_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +75,7 @@
       <workItem from="1657997476969" duration="152000" />
       <workItem from="1657999723636" duration="1700000" />
       <workItem from="1658388985398" duration="533000" />
-      <workItem from="1658389536935" duration="283000" />
+      <workItem from="1658389536935" duration="404000" />
     </task>
     <task id="LOCAL-00001" summary="Trying to resolve problem with deploy commands">
       <created>1657221657943</created>
@@ -289,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658000303230</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Moved DB stuff into config.json">
+      <created>1658389845855</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1658389845855</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +313,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added select menus and deploy command for it" />
     <MESSAGE value="Added select menu event listener" />
     <MESSAGE value="Fixed value issue on dropdown" />
     <MESSAGE value="Updated information shown in event handling" />
@@ -333,6 +337,7 @@
     <MESSAGE value="Added get project by id" />
     <MESSAGE value="Updated version in package.json" />
     <MESSAGE value="Uncommented all the database stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uncommented all the database stuff" />
+    <MESSAGE value="Moved DB stuff into config.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved DB stuff into config.json" />
   </component>
 </project>
