@@ -11,7 +11,7 @@
     "discord.js": "^13.8.1",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.21.2"
+    "sequelize": "^6.28.2"
   },
   "devDependencies": {
     "eslint": "^8.19.0"
